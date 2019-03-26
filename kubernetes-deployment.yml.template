@@ -5,9 +5,9 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: rest-jscreditscore
+  name: rest-jscreditscorerr06
   labels:
-    run: rest-jscreditscore
+    run: rest-jscreditscorerr06
 spec:
   replicas: 1
   strategy:
@@ -18,12 +18,12 @@ spec:
   template:
     metadata:
       labels:
-        run: rest-jscreditscore
+        run: rest-jscreditscorerr06
     spec:
       containers:
       - image: $DOCKER_REPO:$WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
         imagePullPolicy: Always
-        name: rest-jscreditscore
+        name: rest-jscreditscorerr06
         ports:
         - containerPort: 3000
           protocol: TCP
@@ -37,8 +37,8 @@ metadata:
   name: rest-jscreditscore-svc
 spec:
   selector:
-    run: rest-jscreditscore
+    run: rest-jscreditscorerr06
   ports:
-    - port: 8088
+    - port: 8103
       targetPort: 3000
   type: ClusterIP
