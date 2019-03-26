@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: rest-jscreditscore-svc
+  name: rest-jscreditscore-svcerr06
 spec:
   selector:
     run: rest-jscreditscorerr06
