@@ -5,7 +5,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: rest-jscreditscorerr06
+  name: rest-jscreditscorerr06-stan
   labels:
     run: rest-jscreditscorerr06
 spec:
